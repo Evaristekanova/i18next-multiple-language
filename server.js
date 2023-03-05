@@ -21,3 +21,4 @@ app.use("*", (req, res) => {
     res.status(404).json({ message: req.t("route_not_foound") });
 });
 app.listen(8000, () => console.log("server is running right now"));
+module.exports = app

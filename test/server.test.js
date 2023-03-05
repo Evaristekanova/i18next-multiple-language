@@ -7,3 +7,10 @@ describe("GET /", () => {
     expect(response.statusCode).toBe(200);
   });
 });
+
+describe("GET /", () => { 
+  it("should return 404", async () => { 
+    const res = await request(app).get("/notfound");
+    expect(res.statusCode).toBe(404);
+  })
+})
